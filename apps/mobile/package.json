@@ -5,6 +5,7 @@
   "dependencies": {
     "@react-navigation/bottom-tabs": "*",
     "@react-navigation/native": "*",
+    "@react-navigation/native-stack": "*",
     "@reduxjs/toolkit": "*",
     "@react-native/metro-config": "*",
     "@testing-library/jest-native": "*",

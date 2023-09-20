@@ -1,14 +1,16 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
-import React, { useRef, useState } from 'react';
-import { SafeAreaView, StyleSheet, ScrollView, View, Text } from 'react-native';
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+import { AppNavigator } from './navigator/AppNavigator';
+import 'react-native-gesture-handler';
 
 export const App = () => {
   return (
-    <>
-      <Text>Hello</Text>
-    </>
+    <Provider store={store}>
+      <AppNavigator isNewUser={false} />
+    </Provider>
   );
 };
-const styles = StyleSheet.create({});
 
 export default App;

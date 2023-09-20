@@ -9,20 +9,19 @@ import {
 import NavBarComponent from '../components/NavBarComponent';
 import InputComponent from '../components/InputComponent';
 import StartChatInstructionsComponent from '../components/StartChatInstructionsComponent';
-import {useDispatch, useSelector} from 'react-redux';
-import {ConversationType} from '../../../types/chat.types';
-import {RootStoreType} from '../../../store/reducers/types';
+import { useDispatch, useSelector } from 'react-redux';
+import { ConversationType } from '../../../types/chat.types';
+import { RootStoreType } from '../../../store/reducers/types';
 import ChatBubbleComponent from '../components/ChatBubble';
-import {sendMsgAction} from '../actions/chatActions';
-import {colors} from '../../../utils';
-import {useNavigation} from '@react-navigation/native';
+import { sendMsgAction } from '../actions/chatActions';
+import { colors } from '../../../utils';
+import { useNavigation } from '@react-navigation/native';
 
 const ChatScreen = (props): React.JSX.Element => {
-  const {navigation} = props;
+  const { navigation } = props;
 
-  const chatConversation = useSelector(
-    (state: RootStoreType) => state.chatReducer.conversationThread,
-  );
+  const chatConversation = [];
+  useSelector((state: RootStoreType) => state.chatReducer.conversationThread);
 
   //const navigation = useNavigation();
   const dispatch = useDispatch();
@@ -55,7 +54,7 @@ const ChatScreen = (props): React.JSX.Element => {
           <ScrollView style={styles.promptContainer}>
             {chatConversation.length > 0 ? (
               <>
-                {chatConversation.map(e => (
+                {chatConversation.map((e) => (
                   <ChatBubbleComponent
                     isBot={e.isBot}
                     msg={e.msgContent}
