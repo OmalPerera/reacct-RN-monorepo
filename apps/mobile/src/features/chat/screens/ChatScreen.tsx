@@ -20,8 +20,9 @@ import { useNavigation } from '@react-navigation/native';
 const ChatScreen = (props): React.JSX.Element => {
   const { navigation } = props;
 
-  const chatConversation = [];
-  useSelector((state: RootStoreType) => state.chatReducer.conversationThread);
+  const chatConversation = useSelector(
+    (state: RootStoreType) => state.chatReducer.conversationThread
+  );
 
   //const navigation = useNavigation();
   const dispatch = useDispatch();
