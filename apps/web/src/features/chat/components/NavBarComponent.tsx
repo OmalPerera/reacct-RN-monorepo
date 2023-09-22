@@ -1,48 +1,53 @@
-// import React from 'react';
-// import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-// import {colors, images} from '../../../utils';
+import React from 'react';
+import { colors } from '../../../utils';
+import { images } from '../../../utils/images';
 
-// const NavBarComponent = ({onRightBtnPress, onMenuPress}) => {
-//   return (
-//     <View style={styles.navBarContainer}>
-//       <TouchableOpacity style={styles.menuBtn} onPress={onMenuPress}>
-//         <Image source={images.menu} style={styles.menuImg} />
-//       </TouchableOpacity>
-//       <Text style={styles.chatNameTxt}>Chat Name</Text>
-//       <TouchableOpacity onPress={onRightBtnPress}>
-//         <Image source={images.botHeadshot} style={styles.botImg} />
-//       </TouchableOpacity>
-//     </View>
-//   );
-// };
+type NavbarProps = {
+  onRightBtnPress: any;
+  onMenuPress: any;
+};
+const NavBarComponent = ({ onRightBtnPress, onMenuPress }: NavbarProps) => {
+  return (
+    <div style={styles.navBarContainer}>
+      <button style={styles.menuBtn} onClick={onMenuPress}>
+        <img src={images.menu} alt="Menu" style={styles.menuImg} />
+      </button>
+      <span style={styles.chatNameTxt}>Chat Name</span>
+      <button onClick={onRightBtnPress}>
+        <img src={images.botHeadshot} alt="Bot" style={styles.botImg} />
+      </button>
+    </div>
+  );
+};
 
-// export default NavBarComponent;
+export default NavBarComponent;
 
-// const styles = StyleSheet.create({
-//   navBarContainer: {
-//     flexDirection: 'row',
-//     justifyContent: 'space-between',
-//     alignItems: 'center',
-//     borderBottomColor: colors.greyBorder,
-//     borderBottomWidth: 1,
-//     paddingVertical: 5,
-//   },
-//   menuBtn: {
-//     paddingHorizontal: 15,
-//     paddingVertical: 8,
-//   },
-//   menuImg: {
-//     height: 35,
-//     width: 35,
-//   },
-//   chatNameTxt: {
-//     color: colors.white,
-//     fontSize: 16,
-//     fontWeight: '700',
-//   },
-//   botImg: {
-//     height: 35,
-//     width: 35,
-//     marginHorizontal: 15,
-//   },
-// });
+const styles = {
+  navBarContainer: {
+    display: 'flex',
+    //flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '10px',
+    backgroundColor: '#f0f0f0',
+    borderBottom: '1px solid grey',
+  },
+  menuBtn: {
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+  },
+  menuImg: {
+    width: '24px',
+    height: '24px',
+  },
+  chatNameTxt: {
+    fontSize: '18px',
+    fontWeight: 'bold',
+  },
+  botImg: {
+    width: '32px',
+    height: '32px',
+    borderRadius: '50%',
+  },
+};

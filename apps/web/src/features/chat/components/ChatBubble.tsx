@@ -1,6 +1,7 @@
 import React from 'react';
 import { colors } from '../../../utils';
 import styles from '../styles/ChatBubble.module.css';
+import { images } from '../../../utils/images';
 
 type ChatBubbleComponentProps = {
   isBot: boolean;
@@ -13,8 +14,8 @@ const ChatBubbleComponent = ({
 }: ChatBubbleComponentProps): JSX.Element => {
   const getAvatarImage = () => {
     return isBot
-      ? { uri: 'https://i.pravatar.cc/300?img=12' } //images.botHeadshot
-      : { uri: 'https://i.pravatar.cc/300?img=12' };
+      ? 'https://i.pravatar.cc/300?img=12' //images.botHeadshot
+      : images.botHeadshot;
   };
 
   const bubbleContainerStyles = {
@@ -28,11 +29,11 @@ const ChatBubbleComponent = ({
     <div style={bubbleContainerStyles}>
       <div className={styles['avatarContainerStyles']}>
         <div className={styles['avatarStyStyles']}>
-          {/* <img
+          <img
             src={getAvatarImage()}
             alt="Avatar"
             className={styles['avatarImgStyles']}
-          /> */}
+          />
         </div>
       </div>
       <div>

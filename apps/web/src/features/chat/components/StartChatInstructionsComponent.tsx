@@ -1,37 +1,78 @@
-// import React from 'react';
-// import {Image, StyleSheet, Text, View} from 'react-native';
-// import {colors, images} from '../../../utils';
+import React from 'react';
+import { colors } from '../../../utils';
+import { images } from '../../../utils/images';
 
-// const StartChatInstructionsComponent = () => {
-//   return (
-//     <View style={styles.instructionContainer}>
-//       <View>
-//         <Image
-//           source={images.botWithMagnifier}
-//           resizeMode="contain"
-//           style={styles.botImageStyles}
-//         />
-//       </View>
-//       <View style={styles.lowerContentContainer}>
-//         <View style={styles.spinnedArrowContainer}>
-//           <Image
-//             source={images.onboardArrow}
-//             resizeMode="contain"
-//             style={styles.spinnedArrowImg}
-//           />
-//         </View>
-//         <View style={styles.textContainer}>
-//           <Text style={styles.instructionHeader}>Start a new conversation</Text>
-//           <Text style={styles.instructionDetails}>
-//             Type your first message below.
-//           </Text>
-//         </View>
-//       </View>
-//     </View>
-//   );
-// };
+const StartChatInstructionsComponent = () => {
+  return (
+    <div style={styles.instructionContainer}>
+      <div>
+        <img
+          src={images.botWithMagnifier}
+          alt="Bot"
+          style={styles.botImageStyles}
+        />
+      </div>
+      <div style={styles.lowerContentContainer}>
+        <div style={styles.spinnedArrowContainer}>
+          <img
+            src={images.onboardArrow}
+            alt="Arrow"
+            style={styles.spinnedArrowImg}
+          />
+        </div>
+        <div style={styles.textContainer}>
+          <h2 style={styles.instructionHeader}>Start a new conversation</h2>
+          <p style={styles.instructionDetails}>
+            Type your first message below.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-// export default StartChatInstructionsComponent;
+export default StartChatInstructionsComponent;
+
+const styles = {
+  instructionContainer: {
+    display: 'flex',
+    //flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '10px',
+    backgroundColor: '#f0f0f0',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+  },
+  botImageStyles: {
+    width: '64px',
+    height: '64px',
+    //objectFit: 'contain',
+  },
+  lowerContentContainer: {
+    display: 'flex',
+    //flexDirection: 'row',
+    alignItems: 'center',
+  },
+  spinnedArrowContainer: {
+    marginRight: '20px',
+  },
+  spinnedArrowImg: {
+    width: '32px',
+    height: '32px',
+    //objectFit: 'contain',
+  },
+  textContainer: {
+    display: 'flex',
+    //flexDirection: 'column',
+  },
+  instructionHeader: {
+    fontSize: '20px',
+    fontWeight: 'bold',
+  },
+  instructionDetails: {
+    fontSize: '16px',
+  },
+};
 
 // const styles = StyleSheet.create({
 //   instructionContainer: {
