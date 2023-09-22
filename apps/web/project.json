@@ -1,5 +1,5 @@
 {
-  "name": "mono-r",
+  "name": "mono-web",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/web/src",
   "projectType": "application",
@@ -48,15 +48,15 @@
       "executor": "@nx/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "mono-r:build",
+        "buildTarget": "mono-web:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "mono-r:build:development"
+          "buildTarget": "mono-web:build:development"
         },
         "production": {
-          "buildTarget": "mono-r:build:production",
+          "buildTarget": "mono-web:build:production",
           "hmr": false
         }
       }
