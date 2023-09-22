@@ -1,48 +1,78 @@
-// import React, {memo, useState} from 'react';
-// import {
-//   Image,
-//   StyleSheet,
-//   TextInput,
-//   TouchableOpacity,
-//   View,
-// } from 'react-native';
-// import {colors, images} from '../../../utils';
+import React, { memo, useState } from 'react';
+import { colors } from '../../../utils';
+import { images } from '../../../utils/images';
 
-// interface InputComponentProps {
-//   onSend: (msg: string) => void;
-// }
+interface InputComponentProps {
+  onSend: (msg: string) => void;
+}
 
-// const InputComponent = ({onSend}: InputComponentProps): React.JSX.Element => {
-//   const [msg, setMsg] = useState('');
+const InputComponent = ({ onSend }: InputComponentProps): JSX.Element => {
+  const [msg, setMsg] = useState('');
 
-//   return (
-//     <View style={styles.inputSectionContainer}>
-//       <View style={styles.txtInputWraper}>
-//         <TextInput
-//           style={styles.inputStyle}
-//           onChangeText={setMsg}
-//           placeholder="Type here..."
-//           value={msg}
-//           inputMode="text"
-//           multiline
-//           placeholderTextColor={colors.white}
-//         />
-//         <TouchableOpacity>
-//           <Image source={images.repeat} style={styles.regenerateImg} />
-//         </TouchableOpacity>
-//       </View>
-//       <TouchableOpacity
-//         style={styles.sendBtnPressable}
-//         onPress={() => {
-//           onSend(msg);
-//         }}>
-//         <Image source={images.send} style={styles.sendImg} />
-//       </TouchableOpacity>
-//     </View>
-//   );
-// };
+  return (
+    <div style={styles.inputSectionContainer}>
+      <div style={styles.txtInputWraper}>
+        <input
+          type="text"
+          style={styles.inputStyle}
+          onChange={(e) => setMsg(e.target.value)}
+          placeholder="Type here..."
+          value={msg}
+        />
+        <button>
+          <img src={images.repeat} alt="Repeat" style={styles.regenerateImg} />
+        </button>
+      </div>
+      <button
+        style={styles.sendBtnPressable}
+        onClick={() => {
+          onSend(msg);
+        }}
+      >
+        <img src={images.send} alt="Send" style={styles.sendImg} />
+      </button>
+    </div>
+  );
+};
 
-// export default memo(InputComponent);
+export default memo(InputComponent);
+
+const styles = {
+  inputSectionContainer: {
+    display: 'flex',
+    //flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '10px',
+    backgroundColor: '#f0f0f0',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+  },
+  txtInputWraper: {
+    display: 'flex',
+    //flexDirection: 'row',
+    alignItems: 'center',
+  },
+  inputStyle: {
+    padding: '8px',
+    borderRadius: '5px',
+    border: '1px solid #ccc',
+    marginRight: '10px',
+  },
+  regenerateImg: {
+    width: '24px',
+    height: '24px',
+    cursor: 'pointer',
+  },
+  sendBtnPressable: {
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+  },
+  sendImg: {
+    width: '24px',
+    height: '24px',
+  },
+};
 
 // const styles = StyleSheet.create({
 //   inputSectionContainer: {
