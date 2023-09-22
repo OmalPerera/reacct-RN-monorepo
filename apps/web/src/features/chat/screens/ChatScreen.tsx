@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import NavBarComponent from '../components/NavBarComponent';
 import InputComponent from '../components/InputComponent';
 //import StartChatInstructionsComponent from '../components/StartChatInstructionsComponent';
@@ -9,6 +9,7 @@ import ChatBubbleComponent from '../components/ChatBubble';
 //import { sendMsgAction } from '../actions/chatActions';
 import { colors } from '../../../utils';
 //import { useNavigation } from '@react-navigation/native';
+import st from '../styles/ChatScreen.module.css';
 
 const ChatScreen = (): JSX.Element => {
   const onMsgSend = (msg: string) => {};
@@ -16,16 +17,20 @@ const ChatScreen = (): JSX.Element => {
   const onRightBtnPress = () => {};
 
   return (
-    <div style={styles.bodyContainer}>
-      <div style={styles.outermostContainer}>
-        <NavBarComponent
-          onMenuPress={() => {}}
-          onRightBtnPress={onRightBtnPress}
-        />
-        <div style={styles.promptContainer}>
+    <div className={st['bodyContainer']}>
+      <div className={st['outermostContainer']}>
+        <div>
+          <NavBarComponent
+            onMenuPress={() => {}}
+            onRightBtnPress={onRightBtnPress}
+          />
+        </div>
+        <div className={st['promptContainer']}>
           <ChatBubbleComponent isBot={false} msg="helloo" />
         </div>
-        <InputComponent onSend={onMsgSend} />
+        <div>
+          <InputComponent onSend={onMsgSend} />
+        </div>
       </div>
     </div>
   );
@@ -50,23 +55,3 @@ const ChatScreen = (): JSX.Element => {
 // });
 
 export default ChatScreen;
-
-const styles = {
-  bodyContainer: {
-    flex: 1,
-    display: 'flex',
-    //flexDirection: 'column',
-  },
-  outermostContainer: {
-    flex: 1,
-    display: 'flex',
-    //flexDirection: 'column',
-  },
-  promptContainer: {
-    flex: 1,
-    //overflowY: 'auto',
-    padding: '10px',
-    backgroundColor: '#f0f0f0',
-    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-  },
-};
