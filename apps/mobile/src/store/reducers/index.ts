@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import counterReducer from '../../features/counter/counterReducer';
 import chatReducer from '../../features/chat/reducer/chatReducer';
 
