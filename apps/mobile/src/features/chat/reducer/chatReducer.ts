@@ -1,6 +1,6 @@
-import {createSlice} from '@reduxjs/toolkit';
-import {Action} from '../../../store/reducers/types';
-import {ChatReducerType} from '../../../types/chat.types';
+import { createSlice } from '@reduxjs/toolkit';
+import { Action } from '../../../store/reducers/types';
+import { ChatReducerType } from '@m-repo/types';
 
 const INITIAL_STATE: ChatReducerType = {
   conversationThread: [],
@@ -13,7 +13,7 @@ const chatSlice = createSlice({
   reducers: {
     updateThread: (state, action: Action) => {
       state.conversationThread = state.conversationThread.concat(
-        action.payload,
+        action.payload
       );
     },
     isLoading: (state, action: Action) => {
@@ -24,12 +24,12 @@ const chatSlice = createSlice({
         state.isReplyPending = action.payload;
       },
       prepare: (e, gap) => {
-        return {payload: e - gap};
+        return { payload: e - gap };
       },
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const {updateThread, setValue, isLoading} = chatSlice.actions;
+export const { updateThread, setValue, isLoading } = chatSlice.actions;
 export default chatSlice.reducer;

@@ -1,5 +1,5 @@
 import { isLoading, updateThread } from '../reducer/chatReducer';
-import { ConversationType } from '../../../types/chat.types';
+import { ConversationType } from '@m-repo/types';
 import { Dispatch } from 'redux';
 import sendMsgService, { genrateResponseService } from '../api/chatService';
 //import axios from 'axios';

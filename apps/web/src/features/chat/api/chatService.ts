@@ -4,7 +4,7 @@
 //   OPEN_AI_COMPLETION,
 //   SEND_PROMPT,
 // } from '../../../network/url';
-// import { ConversationType, ResponseDataType } from '../../../types/chat.types';
+// import { ConversationType, ResponseDataType } from '@m-repo/types';
 // // import axios, { AxiosResponse } from 'axios';
 
 // const sendMsgService = (message: string) => {

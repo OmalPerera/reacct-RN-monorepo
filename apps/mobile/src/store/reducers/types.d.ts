@@ -1,5 +1,5 @@
-import {ChatReducerType} from '../../types/chat.types';
-import {CounterReducerType} from '../../types/counter.types';
+import { ChatReducerType } from '@m-repo/types';
+import { CounterReducerType } from '@m-repo/types';
 
 export type Action = {
   type: string;

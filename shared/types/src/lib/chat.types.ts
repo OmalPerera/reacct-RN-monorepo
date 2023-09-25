@@ -4,6 +4,11 @@ export type ConversationType = {
   msgContent: string;
 };
 
+export type Action = {
+  type: string;
+  payload: any;
+};
+
 export type ChatReducerType = {
   conversationThread: ConversationType[];
   isReplyPending: boolean;
@@ -28,5 +33,5 @@ export interface ResponseDataType {
   created: number;
   model: string;
   choices: ChoiceType[];
-  usage: Usage;
+  usage: UsageType;
 }

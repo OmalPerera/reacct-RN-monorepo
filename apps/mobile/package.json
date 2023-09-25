@@ -21,6 +21,7 @@
     "redux-thunk": "*",
     "react-native-svg": "*",
     "metro-config": "*",
-    "react-native-svg-transformer": "*"
+    "react-native-svg-transformer": "*",
+    "tslib": "*"
   }
 }
