@@ -1,0 +1,29 @@
+{
+  "name": "theme",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/theme/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shared/theme",
+        "main": "shared/theme/src/index.ts",
+        "tsConfig": "shared/theme/tsconfig.lib.json",
+        "assets": ["shared/theme/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "shared/theme/**/*.ts",
+          "shared/theme/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
