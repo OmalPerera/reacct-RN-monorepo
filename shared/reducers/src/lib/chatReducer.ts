@@ -32,3 +32,4 @@ const chatSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const { updateThread, setValue, isLoading } = chatSlice.actions;
 export const chatReducer = chatSlice.reducer;
+export const TEST_RED = '----- test Red';

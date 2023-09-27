@@ -1,10 +1,13 @@
 import { isLoading, updateThread } from '../reducer/chatReducer';
 import { ConversationType } from '@m-repo/types';
 import { Dispatch } from 'redux';
-import sendMsgService, { genrateResponseService } from '../api/chatService';
+import sendMsgService from '../api/chatService';
+import { reducers123 } from '../../../shared/reducers/src';
 //import axios from 'axios';
 
 export const sendMsgAction = (message: ConversationType) => {
+  console.log(reducers123());
+
   return async (dispatch: Dispatch) => {
     dispatch(updateThread(message));
     dispatch(isLoading(true));

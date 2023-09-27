@@ -10,6 +10,7 @@ import ChatBubbleComponent from '../components/ChatBubble';
 import { colors } from '../../../utils';
 //import { useNavigation } from '@react-navigation/native';
 import st from '../styles/ChatScreen.module.css';
+import { ABCD } from '@m-repo/reducers';
 
 const ChatScreen = (): JSX.Element => {
   const onMsgSend = (msg: string) => {};
@@ -27,6 +28,7 @@ const ChatScreen = (): JSX.Element => {
         </div>
         <div className={st['promptContainer']}>
           <ChatBubbleComponent isBot={false} msg="helloo" />
+          <span>{ABCD}</span>
         </div>
         <div>
           <InputComponent onSend={onMsgSend} />

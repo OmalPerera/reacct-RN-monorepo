@@ -2,7 +2,9 @@
   "name": "@m-repo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "copyShared": "chmod +x copySharedContent.sh && ./copySharedContent.sh"
+  },
   "private": true,
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.8",
@@ -64,6 +66,7 @@
     "jest": "^29.4.1",
     "jest-circus": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
+    "jest-environment-node": "^29.4.1",
     "jest-react-native": "18.0.0",
     "metro": "0.76.7",
     "metro-babel-register": "0.76.7",
