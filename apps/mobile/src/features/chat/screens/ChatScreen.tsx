@@ -11,7 +11,7 @@ import InputComponent from '../components/InputComponent';
 import StartChatInstructionsComponent from '../components/StartChatInstructionsComponent';
 import { useDispatch, useSelector } from 'react-redux';
 import { ConversationType } from '@m-repo/types';
-import { RootStoreType } from '../../../store/';
+import { RootStoreType } from '../../../shared/common';
 import ChatBubbleComponent from '../components/ChatBubble';
 import { sendMsgAction } from '../actions/chatActions';
 import { colors } from '../../../utils';

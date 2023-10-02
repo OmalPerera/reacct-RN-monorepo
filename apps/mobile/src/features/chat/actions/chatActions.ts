@@ -1,7 +1,7 @@
 import { ConversationType } from '@m-repo/types';
 import { Dispatch } from 'redux';
-import sendMsgService from '../api/chatService';
-import { isLoading, updateThread } from '../../../shared/chat-module/src/';
+import { sendMsgService } from '../../../shared/chat-module/src';
+import { isLoading, updateThread } from '../../../shared/chat-module/src';
 //import axios from 'axios';
 
 export const sendMsgAction = (message: ConversationType) => {

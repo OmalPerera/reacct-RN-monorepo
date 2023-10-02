@@ -1,13 +1,10 @@
+/* eslint-disable @nx/enforce-module-boundaries */
 //import restClient from '../../../network/httpService';
-import {
-  BASE_URL,
-  OPEN_AI_COMPLETION,
-  SEND_PROMPT,
-} from '../../../network/url';
+import { BASE_URL, OPEN_AI_COMPLETION, SEND_PROMPT } from '../../../../common';
 import { ConversationType, ResponseDataType } from '@m-repo/types';
 // import axios, { AxiosResponse } from 'axios';
 
-const sendMsgService = (message: string) => {
+export const sendMsgService = (message: string) => {
   return new Promise((resolve, reject) => {
     fetch('https://run.mocky.io/v3/427dd982-2563-436e-a1e2-706e4b9f9ff8')
       .then((response) => response.json())
@@ -39,5 +36,3 @@ const sendMsgService = (message: string) => {
 
 //   return restClient.post(OPEN_AI_COMPLETION, body);
 // };
-
-export default sendMsgService;

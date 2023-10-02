@@ -1,5 +1,5 @@
-import { SET_COUNTER } from '../../store/actionTypes';
-import { Action } from '../../st';
+import { SET_COUNTER } from '../../shared/common/';
+import { Action } from '@m-repo/types';
 
 const INITIAL_STATE = {
   currentNumber: 1,
