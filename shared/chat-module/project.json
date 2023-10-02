@@ -1,0 +1,29 @@
+{
+  "name": "chat-module",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/chat-module/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shared/chat-module",
+        "main": "shared/chat-module/src/index.ts",
+        "tsConfig": "shared/chat-module/tsconfig.lib.json",
+        "assets": ["shared/chat-module/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "shared/chat-module/**/*.ts",
+          "shared/chat-module/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

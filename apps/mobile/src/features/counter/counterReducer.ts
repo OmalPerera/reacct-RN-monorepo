@@ -1,5 +1,5 @@
-import {SET_COUNTER} from '../../store/actionTypes';
-import {Action} from '../../store/reducers/types';
+import { SET_COUNTER } from '../../store/actionTypes';
+import { Action } from '../../st';
 
 const INITIAL_STATE = {
   currentNumber: 1,

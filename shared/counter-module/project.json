@@ -1,0 +1,29 @@
+{
+  "name": "counter-module",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/counter-module/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/shared/counter-module",
+        "main": "shared/counter-module/src/index.ts",
+        "tsConfig": "shared/counter-module/tsconfig.lib.json",
+        "assets": ["shared/counter-module/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "shared/counter-module/**/*.ts",
+          "shared/counter-module/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

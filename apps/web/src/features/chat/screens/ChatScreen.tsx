@@ -10,7 +10,6 @@ import ChatBubbleComponent from '../components/ChatBubble';
 import { colors } from '../../../utils';
 //import { useNavigation } from '@react-navigation/native';
 import st from '../styles/ChatScreen.module.css';
-import { ABCD } from '@m-repo/reducers';
 
 const ChatScreen = (): JSX.Element => {
   const onMsgSend = (msg: string) => {};
