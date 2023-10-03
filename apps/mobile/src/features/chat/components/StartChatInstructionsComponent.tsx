@@ -25,7 +25,7 @@ const StartChatInstructionsComponent = () => {
           <Text style={styles.instructionDetails}>
             Type your first message below.
           </Text>
-          <Text className="text text-red dark:text-black">
+          <Text className="text text-blue dark:text-black">
             Type your first message below.
           </Text>
         </View>
