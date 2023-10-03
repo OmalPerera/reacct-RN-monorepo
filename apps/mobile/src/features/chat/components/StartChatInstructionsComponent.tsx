@@ -1,6 +1,6 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import {colors, images} from '../../../utils';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import { colors, images } from '../../../utils';
 
 const StartChatInstructionsComponent = () => {
   return (
@@ -23,6 +23,9 @@ const StartChatInstructionsComponent = () => {
         <View style={styles.textContainer}>
           <Text style={styles.instructionHeader}>Start a new conversation</Text>
           <Text style={styles.instructionDetails}>
+            Type your first message below.
+          </Text>
+          <Text className="text text-red dark:text-black">
             Type your first message below.
           </Text>
         </View>

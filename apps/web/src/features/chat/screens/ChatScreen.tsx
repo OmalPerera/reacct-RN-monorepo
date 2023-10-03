@@ -27,7 +27,7 @@ const ChatScreen = (): JSX.Element => {
         </div>
         <div className={st['promptContainer']}>
           <ChatBubbleComponent isBot={false} msg="helloo" />
-          <span>{ABCD}</span>
+          <span></span>
         </div>
         <div>
           <InputComponent onSend={onMsgSend} />
