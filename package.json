@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "copyShared": "chmod +x copySharedContent.sh && ./copySharedContent.sh"
+    "copyTwConfig": "chmod +x hoistTailwindConfig.sh && ./hoistTailwindConfig.sh"
   },
   "private": true,
   "dependencies": {
