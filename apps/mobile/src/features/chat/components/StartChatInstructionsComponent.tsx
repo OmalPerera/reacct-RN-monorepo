@@ -25,8 +25,9 @@ const StartChatInstructionsComponent = () => {
           <Text style={styles.instructionDetails}>
             Type your first message below.
           </Text>
-          <Text className="text text-blue dark:text-black">
-            Type your first message below.
+          <Text>Type your first message below.</Text>
+          <Text className="text-[3vh] uppercase font-bold text-yellow998shade">
+            Open up App.tsx to start working on your app!
           </Text>
         </View>
       </View>
