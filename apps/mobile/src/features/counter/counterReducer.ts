@@ -1,4 +1,4 @@
-import { SET_COUNTER } from '../../shared/common/';
+import { SET_COUNTER } from '@m-repo/common';
 import { Action } from '@m-repo/types';
 
 const INITIAL_STATE = {

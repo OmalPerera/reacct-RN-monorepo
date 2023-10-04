@@ -1,6 +1,6 @@
 /* eslint-disable @nx/enforce-module-boundaries */
 //import restClient from '../../../network/httpService';
-import { BASE_URL, OPEN_AI_COMPLETION, SEND_PROMPT } from '../../../../common';
+import { BASE_URL, OPEN_AI_COMPLETION, SEND_PROMPT } from '@m-repo/common';
 import { ConversationType, ResponseDataType } from '@m-repo/types';
 // import axios, { AxiosResponse } from 'axios';
 

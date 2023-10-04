@@ -11,11 +11,5 @@
     "src/**/*.spec.tsx",
     "test-setup.ts"
   ],
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "../../shared/common/src/lib/network/url.ts"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"]
 }

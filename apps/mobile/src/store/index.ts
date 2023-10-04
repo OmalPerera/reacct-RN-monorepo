@@ -1,5 +1,5 @@
 /* eslint-disable @nx/enforce-module-boundaries */
-import { rootReducer } from '../shared/common/src/lib/store/';
+import { rootReducer } from '@m-repo/common';
 import thunk from 'redux-thunk';
 import { configureStore } from '@reduxjs/toolkit';
 

@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@nx/devkit": "*",
     "@react-navigation/bottom-tabs": "*",
     "@react-navigation/native": "*",
     "@react-navigation/native-stack": "*",
