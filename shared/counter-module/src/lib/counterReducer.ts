@@ -1,19 +1,19 @@
-/* eslint-disable @nx/enforce-module-boundaries */
-import { SET_COUNTER } from '../../../common/src/';
 import { Action } from '@m-repo/types';
+import { createSlice } from '@reduxjs/toolkit';
 
 const INITIAL_STATE = {
   currentNumber: 1,
 };
 
-export const counterReducer = (state = INITIAL_STATE, action: Action) => {
-  switch (action.type) {
-    case SET_COUNTER:
-      return {
-        ...state,
-        currentNumber: action.payload,
-      };
-    default:
-      return state;
-  }
-};
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: INITIAL_STATE,
+  reducers: {
+    setCounter: (state, action: Action) => {
+      state.currentNumber = action.payload;
+    },
+  },
+});
+
+export const { setCounter } = counterSlice.actions;
+export const counterReducer = counterSlice.reducer;

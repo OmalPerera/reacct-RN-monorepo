@@ -1,8 +1,7 @@
+import { setCounter } from '@m-repo/counter-module';
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
-import {setCounterAction} from './counterActions';
-//import {setValue} from './newCounterReducer';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 
 const CounterComponent = (): React.JSX.Element => {
   //const currentNum = useSelector(state => state.counterReducer.currentNumber);
@@ -12,10 +11,10 @@ const CounterComponent = (): React.JSX.Element => {
   const updateCounterValue = (operator: '+' | '-') => {
     if (operator === '+') {
       //dispatch(setValue(currentNum + 1));
-      dispatch(setCounterAction(currentNum + 1));
+      dispatch(setCounter(currentNum + 1));
     } else {
       //dispatch(setValue(currentNum - 1, 10));
-      //dispatch(setCounterAction(currentNum - 1));
+      //dispatch(setCounter(currentNum - 1));
     }
   };
 
@@ -27,7 +26,8 @@ const CounterComponent = (): React.JSX.Element => {
           style={styles.btnContainer}
           onPress={() => {
             updateCounterValue('-');
-          }}>
+          }}
+        >
           <Text style={styles.buttonText}>-</Text>
         </TouchableOpacity>
         <View style={styles.valueContainer}>
@@ -37,7 +37,8 @@ const CounterComponent = (): React.JSX.Element => {
           style={styles.btnContainer}
           onPress={() => {
             updateCounterValue('+');
-          }}>
+          }}
+        >
           <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
       </View>
