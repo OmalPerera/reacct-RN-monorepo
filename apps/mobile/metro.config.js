@@ -23,6 +23,7 @@ const customConfig = {
     blockList: exclusionList([/^(?!.*node_modules).*\/dist\/.*/]),
     unstable_enableSymlinks: true,
     unstable_enablePackageExports: true,
+    unstable_conditionNames: ['browser', 'require', 'react-native'],
   },
 };
 

@@ -27,7 +27,7 @@ const StartChatInstructionsComponent = () => {
           </Text>
           <Text>Type your first message below.</Text>
           <Text className="text-[3vh] uppercase font-bold text-yellow998shade">
-            Open up App.tsx to start working on your app!
+            This styles from tailwind
           </Text>
         </View>
       </View>

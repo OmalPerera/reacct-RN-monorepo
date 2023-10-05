@@ -2,21 +2,13 @@ import { ConversationType } from '@m-repo/types';
 import { Dispatch } from 'redux';
 import { sendMsgService } from '@m-repo/chat-module';
 import { isLoading, updateThread } from '@m-repo/chat-module';
-//import axios from 'axios';
 
 export const sendMsgAction = (message: ConversationType) => {
   return async (dispatch: Dispatch) => {
     dispatch(updateThread(message));
     dispatch(isLoading(true));
 
-    // axios
-    //   .get('https://run.mocky.io/v3/427dd982-2563-436e-a1e2-706e4b9f9ff8', {
-    //     url: 'https://run.mocky.io/v3/427dd982-2563-436e-a1e2-706e4b9f9ff8',
-    //   })
-    //   .then();
-    // console.log('***, result', result);
-
-    sendMsgService('anc')
+    sendMsgService('')
       .then((response) => {
         dispatch(updateThread(response));
       })
