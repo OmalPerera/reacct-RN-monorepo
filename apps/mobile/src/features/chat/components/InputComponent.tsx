@@ -1,4 +1,4 @@
-import React, {memo, useState} from 'react';
+import React, { memo, useState } from 'react';
 import {
   Image,
   StyleSheet,
@@ -6,13 +6,14 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {colors, images} from '../../../utils';
+import { colors } from '../../../utils';
+import images from '@m-repo/assets';
 
 interface InputComponentProps {
   onSend: (msg: string) => void;
 }
 
-const InputComponent = ({onSend}: InputComponentProps): React.JSX.Element => {
+const InputComponent = ({ onSend }: InputComponentProps): React.JSX.Element => {
   const [msg, setMsg] = useState('');
 
   return (
@@ -35,7 +36,8 @@ const InputComponent = ({onSend}: InputComponentProps): React.JSX.Element => {
         style={styles.sendBtnPressable}
         onPress={() => {
           onSend(msg);
-        }}>
+        }}
+      >
         <Image source={images.send} style={styles.sendImg} />
       </TouchableOpacity>
     </View>

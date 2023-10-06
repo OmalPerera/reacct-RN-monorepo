@@ -1,13 +1,8 @@
 export default {
-  menu: require('../../assets/images/menu.png'),
-  botHeadshot: require('../../assets/images/bot_headshot.png'),
-  botWithMagnifier: require('../../assets/images/bot_with_magnifier.png'),
-  repeat: require('../../assets/images/repeat.png'),
-  send: require('../../assets/images/send.png'),
-  onboardArrow: require('../../assets/images/onboard_arrow.png'),
-};
-
-//import { images } from '@m-repo/assets';
-export const GET_IMG_URL = () => {
-  return 'images : ' + '';
+  //menu: require('@m-repo/assets/src/Menu'),
+  botHeadshot: require('@m-repo/assets/src/bot_headshot.png'),
+  botWithMagnifier: require('@m-repo/assets/src/bot_with_magnifier.png'),
+  repeat: require('@m-repo/assets/src/repeat.png'),
+  send: require('@m-repo/assets/src/send.png'),
+  onboardArrow: require('@m-repo/assets/src/onboard_arrow.png'),
 };

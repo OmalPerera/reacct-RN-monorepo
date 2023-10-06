@@ -1,6 +1,8 @@
+/* eslint-disable @nx/enforce-module-boundaries */
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import { colors, images } from '../../../utils';
+import { colors } from '../../../utils';
+import images from '@m-repo/assets';
 
 const StartChatInstructionsComponent = () => {
   return (
