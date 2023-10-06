@@ -1,6 +1,6 @@
 import React, { memo, useState } from 'react';
 import { colors } from '../../../utils';
-import { images } from '../../../utils/images';
+import images from '@m-repo/assets';
 
 interface InputComponentProps {
   onSend: (msg: string) => void;

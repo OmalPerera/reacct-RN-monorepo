@@ -1,6 +1,6 @@
 import React from 'react';
 import { colors } from '../../../utils';
-import { images } from '../../../utils/images';
+import images from '@m-repo/assets';
 
 type NavbarProps = {
   onRightBtnPress: any;

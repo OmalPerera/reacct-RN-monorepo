@@ -1,7 +1,7 @@
 import React from 'react';
 import { colors } from '../../../utils';
 import styles from '../styles/ChatBubble.module.css';
-import { images } from '../../../utils/images';
+import images from '@m-repo/assets';
 
 type ChatBubbleComponentProps = {
   isBot: boolean;
