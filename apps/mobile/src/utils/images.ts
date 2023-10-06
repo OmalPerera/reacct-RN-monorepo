@@ -6,3 +6,8 @@ export default {
   send: require('../../assets/images/send.png'),
   onboardArrow: require('../../assets/images/onboard_arrow.png'),
 };
+
+//import { images } from '@m-repo/assets';
+export const GET_IMG_URL = () => {
+  return 'images : ' + '';
+};

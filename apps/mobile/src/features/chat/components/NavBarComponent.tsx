@@ -1,16 +1,19 @@
 import React from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {colors, images} from '../../../utils';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { colors } from '../../../utils';
 
-const NavBarComponent = ({onRightBtnPress, onMenuPress}) => {
+const NavBarComponent = ({ onRightBtnPress, onMenuPress }) => {
   return (
     <View style={styles.navBarContainer}>
       <TouchableOpacity style={styles.menuBtn} onPress={onMenuPress}>
-        <Image source={images.menu} style={styles.menuImg} />
+        <Image
+          source={require('@m-repo/assets/src/menu.png')}
+          style={styles.menuImg}
+        />
       </TouchableOpacity>
       <Text style={styles.chatNameTxt}>Chat Name</Text>
       <TouchableOpacity onPress={onRightBtnPress}>
-        <Image source={images.botHeadshot} style={styles.botImg} />
+        {/* <Image source={botHeadshot} style={styles.botImg} /> */}
       </TouchableOpacity>
     </View>
   );
