@@ -1,6 +1,7 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import {colors, images} from '../../../utils';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import { colors } from '../../../utils';
+import images from '@m-repo/assets';
 
 type ChatBubbleComponentProps = {
   isBot: boolean;
@@ -14,7 +15,7 @@ const ChatBubbleComponent = ({
   const getAvatarImage = () => {
     return isBot
       ? images.botHeadshot
-      : {uri: 'https://i.pravatar.cc/300?img=12'};
+      : { uri: 'https://i.pravatar.cc/300?img=12' };
   };
   return (
     <View style={[styles.bubbleContainer, isBot ? styles.botMsgBg : {}]}>

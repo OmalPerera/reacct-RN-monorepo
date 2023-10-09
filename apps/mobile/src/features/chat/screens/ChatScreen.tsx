@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ConversationType } from '@m-repo/types';
 import { RootStoreType } from '@m-repo/common';
 import ChatBubbleComponent from '../components/ChatBubble';
-import { sendMsgAction } from '../actions/chatActions';
+import { fetchRatingsById, sendMsgAction } from '../actions/chatActions';
 import { colors } from '../../../utils';
 import { useNavigation } from '@react-navigation/native';
 
@@ -33,7 +33,8 @@ const ChatScreen = (props): React.JSX.Element => {
       isBot: false,
       msgContent: msg,
     };
-    dispatch<any>(sendMsgAction(message));
+    //dispatch<any>(sendMsgAction(message));
+    dispatch<any>(fetchRatingsById(15125)); //this action uses gql
   };
 
   const onRightBtnPress = () => {

@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@apollo/client": "*",
     "@nx/devkit": "*",
     "@react-navigation/bottom-tabs": "*",
     "@react-navigation/native": "*",
@@ -12,6 +13,7 @@
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
     "axios": "*",
+    "graphql": "*",
     "nativewind": "*",
     "react": "*",
     "react-native": "*",

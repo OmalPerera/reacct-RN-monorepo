@@ -2,6 +2,7 @@ import { ConversationType } from '@m-repo/types';
 import { Dispatch } from 'redux';
 import { sendMsgService } from '@m-repo/chat-module';
 import { isLoading, updateThread } from '@m-repo/chat-module';
+import { GET_RATINGS, client } from '@m-repo/network';
 
 export const sendMsgAction = (message: ConversationType) => {
   return async (dispatch: Dispatch) => {
@@ -13,18 +14,35 @@ export const sendMsgAction = (message: ConversationType) => {
         dispatch(updateThread(response));
       })
       .catch((e) => console.log('ERROR : sendMsgAction', e));
+  };
+};
 
-    // genrateResponseService(message.msgContent)
-    //   .then((response) => {
-    //     console.log('** : ', response);
-    //     // const converstaionFromBot: ConversationType = {
-    //     //   isBot: true,
-    //     //   msgContent: response.choices[0].text,
-    //     //   timeStamp: response.created,
-    //     // };
-    //     //dispatch(updateThread(converstaionFromBot));
-    //   })
-    //   .catch((e) => console.log('ERROR : sendMsgAction', e))
-    //   .finally(() => dispatch(isLoading(false)));
+export const fetchRatingsById = (id: number) => {
+  return async (dispatch: Dispatch) => {
+    await client
+      .query({
+        query: GET_RATINGS,
+        variables: {
+          id,
+        },
+      })
+      .then((response) => {
+        if (response.error == null && response.errors == null) {
+          const title = response?.data?.Media?.title;
+          const data = {
+            isBot: true,
+            msgContent:
+              'This msg if from GQL; ' +
+              title.english +
+              ' | ' +
+              title.native +
+              ' | ' +
+              title.romaji,
+            timeStamp: new Date().getTime(),
+          };
+          dispatch(updateThread(data));
+        }
+      })
+      .catch((e) => console.log('ERROR: ', e));
   };
 };

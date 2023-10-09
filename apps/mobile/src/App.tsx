@@ -4,11 +4,15 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { AppNavigator } from './navigator/AppNavigator';
 import 'react-native-gesture-handler';
+import { ApolloProvider } from '@apollo/client';
+import { client } from '@m-repo/network';
 
 export const App = () => {
   return (
     <Provider store={store}>
-      <AppNavigator isNewUser={false} />
+      <ApolloProvider client={client}>
+        <AppNavigator isNewUser={false} />
+      </ApolloProvider>
     </Provider>
   );
 };
