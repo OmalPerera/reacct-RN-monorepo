@@ -1,8 +1,8 @@
 import { ConversationType } from '@m-repo/types';
 import { Dispatch } from 'redux';
-import { sendMsgService } from '@m-repo/chat-module';
-import { isLoading, updateThread } from '@m-repo/chat-module';
 import { GET_RATINGS, client } from '@m-repo/network';
+import { isLoading, updateThread } from '../chatReducer';
+import { sendMsgService } from '../api/chatService';
 
 export const sendMsgAction = (message: ConversationType) => {
   return async (dispatch: Dispatch) => {

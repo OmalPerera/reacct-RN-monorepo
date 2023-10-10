@@ -12,7 +12,7 @@ import StartChatInstructionsComponent from '../components/StartChatInstructionsC
 import { useDispatch, useSelector } from 'react-redux';
 import { ConversationType } from '@m-repo/types';
 import ChatBubbleComponent from '../components/ChatBubble';
-import { fetchRatingsById, sendMsgAction } from '../actions/chatActions';
+import { fetchRatingsById, sendMsgAction } from '@m-repo/chat-module';
 import { colors } from '../../../utils';
 import { useNavigation } from '@react-navigation/native';
 import { RootState } from '../../../store';

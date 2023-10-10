@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "reset-metro-cache": "cd apps/mobile/ && react-native start --reset-cache && cd .. && cd ..",
     "copyTwConfig": "chmod +x hoistTailwindConfig.sh && ./hoistTailwindConfig.sh",
     "generate-gql-scheme": "graphql-codegen --config graphql.config.yml"
   },
