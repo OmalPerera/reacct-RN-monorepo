@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "copyTwConfig": "chmod +x hoistTailwindConfig.sh && ./hoistTailwindConfig.sh"
+    "copyTwConfig": "chmod +x hoistTailwindConfig.sh && ./hoistTailwindConfig.sh",
+    "generate-gql-scheme": "graphql-codegen --config graphql.config.yml"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +31,11 @@
   "devDependencies": {
     "@babel/core": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-graphql-request": "^6.0.0",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/typescript-react-apollo": "^4.0.0",
     "@nx/detox": "16.8.1",
     "@nx/eslint-plugin": "16.8.1",
     "@nx/jest": "16.8.1",
@@ -51,6 +57,7 @@
     "@testing-library/jest-native": "5.4.2",
     "@testing-library/react": "14.0.0",
     "@testing-library/react-native": "12.1.2",
+    "@types/graphql": "^14.5.0",
     "@types/jest": "^29.4.0",
     "@types/node": "18.14.4",
     "@types/react": "18.2.14",
@@ -58,6 +65,7 @@
     "@types/react-native": "0.72.2",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
+    "apollo": "^2.34.0",
     "autoprefixer": "^10.4.16",
     "babel-jest": "^29.4.1",
     "detox": "^20.11.1",

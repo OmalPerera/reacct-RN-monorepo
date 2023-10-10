@@ -16,6 +16,7 @@ import { fetchRatingsById, sendMsgAction } from '../actions/chatActions';
 import { colors } from '../../../utils';
 import { useNavigation } from '@react-navigation/native';
 import { RootState } from '../../../store';
+import { useGetAnimeCharactersQuery } from '@m-repo/network';
 
 const ChatScreen = (props): React.JSX.Element => {
   const { navigation } = props;
@@ -23,6 +24,11 @@ const ChatScreen = (props): React.JSX.Element => {
   const chatConversation = useSelector(
     (state: RootState) => state.chatReducer.conversationThread
   );
+  const { data, loading, error } = useGetAnimeCharactersQuery({
+    variables: {
+      id: 15125,
+    },
+  });
 
   //const navigation = useNavigation();
   const dispatch = useDispatch();
@@ -38,6 +44,7 @@ const ChatScreen = (props): React.JSX.Element => {
   };
 
   const onRightBtnPress = () => {
+    console.log('useGetCharactersQuery : ', data);
     navigation.navigate('AboutScreen');
   };
 
