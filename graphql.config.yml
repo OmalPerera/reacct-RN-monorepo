@@ -3,7 +3,7 @@ schema:
 documents:
   - './shared/**/*.graphql'
 generates:
-  ./shared/network/src/lib/__generated__/graphql.ts:
+  ./shared/network/src/lib/queries/__generated__/graphql.ts:
     plugins:
       - typescript
       - typescript-operations

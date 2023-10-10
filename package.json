@@ -5,7 +5,7 @@
   "scripts": {
     "reset-metro-cache": "cd apps/mobile/ && react-native start --reset-cache && cd .. && cd ..",
     "copyTwConfig": "chmod +x hoistTailwindConfig.sh && ./hoistTailwindConfig.sh",
-    "generate-gql-scheme": "graphql-codegen --config graphql.config.yml"
+    "generate-gql-queries": "graphql-codegen --config graphql.config.yml"
   },
   "private": true,
   "dependencies": {

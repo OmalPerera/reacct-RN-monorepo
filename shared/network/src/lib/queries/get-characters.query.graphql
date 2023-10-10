@@ -8,3 +8,14 @@ query GetAnimeCharacters($id: Int) {
     }
   }
 }
+
+query GetCharactersCountry($id: Int) {
+  Media(id: $id, type: ANIME) {
+    id
+    countryOfOrigin
+    volumes
+    title {
+      english
+    }
+  }
+}

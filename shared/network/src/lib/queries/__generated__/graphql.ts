@@ -4676,6 +4676,13 @@ export type GetAnimeCharactersQueryVariables = Exact<{
 
 export type GetAnimeCharactersQuery = { __typename?: 'Query', Media?: { __typename?: 'Media', id: number, title?: { __typename?: 'MediaTitle', romaji?: string | null, english?: string | null, native?: string | null } | null } | null };
 
+export type GetCharactersCountryQueryVariables = Exact<{
+  id?: InputMaybe<Scalars['Int']['input']>;
+}>;
+
+
+export type GetCharactersCountryQuery = { __typename?: 'Query', Media?: { __typename?: 'Media', id: number, countryOfOrigin?: any | null, volumes?: number | null, title?: { __typename?: 'MediaTitle', english?: string | null } | null } | null };
+
 
 export const GetAnimeCharactersDocument = gql`
     query GetAnimeCharacters($id: Int) {
@@ -4717,3 +4724,43 @@ export function useGetAnimeCharactersLazyQuery(baseOptions?: Apollo.LazyQueryHoo
 export type GetAnimeCharactersQueryHookResult = ReturnType<typeof useGetAnimeCharactersQuery>;
 export type GetAnimeCharactersLazyQueryHookResult = ReturnType<typeof useGetAnimeCharactersLazyQuery>;
 export type GetAnimeCharactersQueryResult = Apollo.QueryResult<GetAnimeCharactersQuery, GetAnimeCharactersQueryVariables>;
+export const GetCharactersCountryDocument = gql`
+    query GetCharactersCountry($id: Int) {
+  Media(id: $id, type: ANIME) {
+    id
+    countryOfOrigin
+    volumes
+    title {
+      english
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetCharactersCountryQuery__
+ *
+ * To run a query within a React component, call `useGetCharactersCountryQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetCharactersCountryQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetCharactersCountryQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useGetCharactersCountryQuery(baseOptions?: Apollo.QueryHookOptions<GetCharactersCountryQuery, GetCharactersCountryQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetCharactersCountryQuery, GetCharactersCountryQueryVariables>(GetCharactersCountryDocument, options);
+      }
+export function useGetCharactersCountryLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetCharactersCountryQuery, GetCharactersCountryQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetCharactersCountryQuery, GetCharactersCountryQueryVariables>(GetCharactersCountryDocument, options);
+        }
+export type GetCharactersCountryQueryHookResult = ReturnType<typeof useGetCharactersCountryQuery>;
+export type GetCharactersCountryLazyQueryHookResult = ReturnType<typeof useGetCharactersCountryLazyQuery>;
+export type GetCharactersCountryQueryResult = Apollo.QueryResult<GetCharactersCountryQuery, GetCharactersCountryQueryVariables>;
