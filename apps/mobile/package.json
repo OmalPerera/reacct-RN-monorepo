@@ -17,6 +17,7 @@
     "nativewind": "*",
     "react": "*",
     "react-native": "*",
+    "react-native-config": "*",
     "react-native-gesture-handler": "*",
     "react-native-safe-area-context": "*",
     "react-native-screens": "*",

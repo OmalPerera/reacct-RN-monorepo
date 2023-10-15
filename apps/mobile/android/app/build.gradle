@@ -56,6 +56,13 @@ react {
  */
 def enableProguardInReleaseBuilds = false
 
+project.ext.envConfigFiles = [
+    debug: "env/.env.dev",
+    release: "env/.env.production",
+]
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 /**
  * The preferred build flavor of JavaScriptCore (JSC)
  *
@@ -101,9 +108,9 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-            
-        }
-    }
+
+   }
+ }
 }
 
 dependencies {

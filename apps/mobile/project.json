@@ -37,6 +37,13 @@
       "dependsOn": ["ensure-symlink", "sync-deps"],
       "options": {}
     },
+    "run-android-prod": {
+      "executor": "@nx/react-native:run-android",
+      "dependsOn": ["ensure-symlink", "sync-deps"],
+      "options": {
+        "mode": "release"
+      }
+    },
     "build-android": {
       "executor": "@nx/react-native:build-android",
       "outputs": [
