@@ -20,7 +20,23 @@
     "run-ios": {
       "executor": "@nx/react-native:run-ios",
       "dependsOn": ["ensure-symlink", "sync-deps", "pod-install"],
-      "options": {}
+      "options": {
+        "scheme": "Mobile-dev"
+      }
+    },
+    "run-ios-qa": {
+      "executor": "@nx/react-native:run-ios",
+      "dependsOn": ["ensure-symlink", "sync-deps", "pod-install"],
+      "options": {
+        "scheme": "Mobile-QA"
+      }
+    },
+    "run-ios-prod": {
+      "executor": "@nx/react-native:run-ios",
+      "dependsOn": ["ensure-symlink", "sync-deps", "pod-install"],
+      "options": {
+        "scheme": "Mobile-prod"
+      }
     },
     "bundle-ios": {
       "executor": "@nx/react-native:bundle",
